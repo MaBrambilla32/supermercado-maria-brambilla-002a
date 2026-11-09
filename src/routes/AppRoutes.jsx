@@ -1,6 +1,5 @@
-
 import { lazy, Suspense } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import DashboardLayout from '../layouts/DashboardLayout'
 
 const Inventario = lazy(() => import('../pages/Inventario'))
@@ -10,7 +9,7 @@ const Carrito = lazy(() => import('../pages/Carrito'))
 
 function AppRoutes({ appData }) {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Suspense fallback={<p className="p-8 text-center">Cargando pantalla...</p>}>
         <Routes>
           <Route path="/" element={<DashboardLayout appData={appData} />}>
@@ -22,7 +21,7 @@ function AppRoutes({ appData }) {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
