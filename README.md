@@ -1,16 +1,101 @@
-# React + Vite
+# SuperMarket - Sistema de Gestión de Inventario
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+SuperMarket es una aplicación web desarrollada con React que permite administrar el inventario de un supermercado. Cuenta con funcionalidades para visualizar productos, filtrarlos por categoría, consultar sus detalles y gestionar un carrito de compras con actualización automática del stock.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Funcionalidades
 
-## React Compiler
+- **Inventario:** visualización de los productos disponibles con su nombre, categoría, precio, descripción y stock.
+- **Filtro por categoría:** permite buscar productos según su categoría sin modificar el inventario original.
+- **Agregar productos:** permite registrar nuevos productos indicando sus datos y cantidad disponible.
+- **Detalle del producto:** muestra la información completa de cada producto seleccionado.
+- **Carrito de compras:** permite agregar productos y modificar sus cantidades.
+- **Actualización de stock:** el inventario se actualiza automáticamente al agregar o retirar unidades del carrito.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- React 19
+- JavaScript
+- Vite
+- React Router DOM
+- Tailwind CSS
+- Git y GitHub
+- GitHub Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estructura del proyecto
+
+```text
+supermercado/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── layouts/
+│   │   └── DashboardLayout.jsx
+│   ├── pages/
+│   │   ├── Inventario.jsx
+│   │   ├── AgregarProducto.jsx
+│   │   ├── DetalleProducto.jsx
+│   │   └── Carrito.jsx
+│   ├── routes/
+│   │   └── AppRoutes.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+## Instalación y ejecución
+
+Para ejecutar el proyecto localmente:
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/MaBrambilla32/supermercado-maria-brambilla-002a.git
+```
+
+2. Ingresar a la carpeta:
+
+```bash
+cd supermercado-maria-brambilla-002a
+```
+
+3. Instalar las dependencias:
+
+```bash
+npm install
+```
+
+4. Iniciar el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+## Construcción y publicación
+
+Para generar la versión de producción:
+
+```bash
+npm run build
+```
+
+Para publicar en GitHub Pages:
+
+```bash
+npm run deploy
+```
+
+## Repositorio
+
+[Ver código fuente en GitHub](https://github.com/MaBrambilla32/supermercado-maria-brambilla-002a)
+
+## Publicación
+
+Proyecto publicado mediante GitHub Pages.
+
+Desarrollado por **María Brambilla** - Curso **002A**.
